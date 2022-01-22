@@ -26,6 +26,8 @@ import Wallet from "components/Wallet";
 import ERC20Balance from "components/ERC20Balance";
 import ERC20Transfers from "components/ERC20Transfers";
 import DEX from "components/DEX";
+import NFTCreateRinkeby from "components/NFTCreateRinkeby/NFTCreate";
+import NFTCreatePolygon from "components/NFTCreatePolygon/NFTCreate";
 
 const { Header, Footer } = Layout;
 
@@ -114,6 +116,12 @@ const App = ({ isServerInfo }) => {
               </Menu.Item>
             </SubMenu>
             <SubMenu title="NFT" key="nft">
+              <Menu.Item key="/nftCreateRinkeby">
+                <NavLink to="/nftCreateRinkeby">Create Rinkeby NFT</NavLink>
+              </Menu.Item>
+              <Menu.Item key="/nftCreatePolygon">
+                <NavLink to="/nftCreatePolygon">Create Polygon NFT</NavLink>
+              </Menu.Item>
               <Menu.Item key="/NFTMarketPlace" onClick={() => setInputValue("explore")} >
                 <NavLink to="/NFTMarketPlace">🛒 Explore Market</NavLink>
               </Menu.Item>
@@ -167,6 +175,12 @@ const App = ({ isServerInfo }) => {
             <Route path="/nftBalance">
               <NFTBalance />
             </Route>
+            <Route path="/nftCreateRinkeby">
+              <NFTCreateRinkeby />
+            </Route>
+            <Route path="/nftCreatePolygon">
+              <NFTCreatePolygon />
+            </Route>
             <Route path="/NFTMarketPlace">
               <NFTTokenIds inputValue={inputValue} setInputValue={setInputValue}/>
             </Route>
@@ -190,11 +204,11 @@ const App = ({ isServerInfo }) => {
         <Text style={{ display: "block" }}>
           ⭐️ Please star this{" "}
           <a
-            href="https://github.com/ethereum-boilerplate/ethereum-boilerplate/"
+            href="https://github.com/nwkcoins/ethereum-nft-marketplace-boilerplate"
             target="_blank"
             rel="noopener noreferrer"
           >
-            boilerplate
+            boilerplate (NWKCoins vs)
           </a>
           , every star makes us very happy!
         </Text>
