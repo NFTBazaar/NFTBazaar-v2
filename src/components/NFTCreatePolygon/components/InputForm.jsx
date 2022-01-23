@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useMoralis } from "react-moralis";
 import TextArea from "antd/lib/input/TextArea";
 import ReactHtmlParser from "react-html-parser";
-import abi from '../Truffle/build/nft_create.jsx';
+import abi from './abi.jsx';
 
 const styles = {
   card: {
